@@ -1,5 +1,5 @@
-$path = "C:\Users\GCDESKTOP21\OneDrive\Pictures\Florida 2010\2010-11-07 Florida\"
-$files = Get-ChildItem -Path $path
+$path = "C:\Users\GCDESKTOP21\OneDrive\Pictures\Florida 2016\"
+$files = Get-ChildItem -Path $path #-Exclude "*.mov"
 $ctr = 100
 
 foreach ($file in $files) {
@@ -7,7 +7,7 @@ foreach ($file in $files) {
 
     $ctr += 1
 
-    $FullNewName = $path + "Florida-2010_" + $ctr + ".jpg"
+    $FullNewName = $path + "Florida-2016_" + $ctr + ".jpg"
     Write-Host($FullNewName)
 
     Rename-Item -Path $file.FullName -NewName $fullNewName
